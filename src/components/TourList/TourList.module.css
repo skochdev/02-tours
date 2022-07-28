@@ -1,0 +1,28 @@
+.tourListItem {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  box-shadow: 0 0 11px 3px rgba(214, 214, 214, 1);
+  border-radius: 9px;
+}
+
+.tourListItem + .tourListItem {
+  margin-top: 2rem;
+}
+
+.notInterestedBtn {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  background-color: #cb7e7e;
+  padding: 0.5rem 0.7rem;
+  border-radius: 100vw;
+  color: #ffffff;
+}
+
+.notInterestedBtn:hover,
+.notInterestedBtn:focus {
+  background-color: #ff7d7d;
+}
