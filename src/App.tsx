@@ -1,8 +1,7 @@
 import { Tour } from './components/TourItem/TourItem'; // interface for tour
-import React from 'react';
 import { useState, useEffect } from 'react';
-import './App.module.css';
 import TourList from './components/TourList/TourList';
+import s from './App.module.css';
 
 const URL = 'https://course-api.com/react-tours-project';
 
@@ -69,7 +68,10 @@ function App() {
     return (
       <>
         <h1>No tours left</h1>
-        <button type="button" onClick={() => setTours([])}>
+        <button
+          className={`${s.button} ${s.refreshButton}`}
+          type="button"
+          onClick={() => fetchTours(URL)}>
           Refresh
         </button>
       </>
@@ -77,7 +79,13 @@ function App() {
   }
 
   return (
-    <>{tours && <TourList tours={tours} handleNotInterestedClick={handleNotInterestedClick} />}</>
+    <>
+      {tours && (
+        <section className={s.section}>
+          <TourList tours={tours} handleNotInterestedClick={handleNotInterestedClick} />
+        </section>
+      )}
+    </>
   );
 }
 
