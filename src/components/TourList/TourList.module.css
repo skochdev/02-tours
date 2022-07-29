@@ -1,6 +1,9 @@
-.tourListItem {
-  max-width: 600px;
+.tourList {
+  max-width: 500px;
   margin: 0 auto;
+}
+
+.tourListItem {
   background-color: #fff;
   padding: 1rem 1rem;
   box-shadow: 0 0 11px 3px rgba(214, 214, 214, 1);

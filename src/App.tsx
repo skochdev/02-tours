@@ -2,6 +2,7 @@ import { Tour } from './components/TourItem/TourItem'; // interface for tour
 import { useState, useEffect } from 'react';
 import TourList from './components/TourList/TourList';
 import s from './App.module.css';
+import Loading from './components/Loading/Loading';
 
 const URL = 'https://course-api.com/react-tours-project';
 
@@ -50,7 +51,11 @@ function App() {
   };
 
   if (isLoading) {
-    return <div>Loading....</div>;
+    return (
+      <div className={s.spinnerWrapper}>
+        <Loading />
+      </div>
+    );
   }
 
   if (isError) {

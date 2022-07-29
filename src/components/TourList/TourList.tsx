@@ -13,7 +13,7 @@ const TourList = ({ tours, handleNotInterestedClick }: Props) => {
   };
 
   return (
-    <ul>
+    <ul className={s.tourList}>
       {tours.map(({ id, name, image, price, info }: Tour) => (
         <li className={s.tourListItem} key={id}>
           <TourItem name={name} image={image} price={price} info={info} id={id} />

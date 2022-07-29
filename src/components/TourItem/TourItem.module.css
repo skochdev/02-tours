@@ -1,25 +1,28 @@
 .tourImageWrapper {
-  max-width: 600px;
-  height: 400px;
+  width: 100%;
+  max-height: 300px;
   overflow: hidden;
   margin: 0 auto;
 }
 
 .tourImage {
   object-fit: cover;
-  object-position: right bottom;
+  object-position: center;
   height: 100%;
   width: 100%;
 }
 
 .tourName {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  flex-basis: 76%;
   font-weight: 700;
 }
 
 .tourPrice {
+  text-align: center;
+  flex-basis: 22%;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #f8d134;
   padding: 5px 10px;
   background-color: rgba(9, 29, 126, 0.62);
@@ -31,10 +34,10 @@
 }
 
 .showMore {
-  margin-left: 10px;
+  margin-left: 4px;
   color: #03a5d0;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   background-color: transparent;
   cursor: pointer;
@@ -47,6 +50,7 @@
 
 .tourSpecs {
   display: flex;
-  align-items: baseline;
+  gap: 2%;
+  align-items: center;
   justify-content: space-between;
 }
