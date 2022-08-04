@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/02-tours/static/css/main.104f4759.css",
-    "main.js": "/02-tours/static/js/main.301c3c53.js",
+    "main.js": "/02-tours/static/js/main.a8905a08.js",
     "index.html": "/02-tours/index.html",
     "main.104f4759.css.map": "/02-tours/static/css/main.104f4759.css.map",
-    "main.301c3c53.js.map": "/02-tours/static/js/main.301c3c53.js.map"
+    "main.a8905a08.js.map": "/02-tours/static/js/main.a8905a08.js.map"
   },
   "entrypoints": [
     "static/css/main.104f4759.css",
-    "static/js/main.301c3c53.js"
+    "static/js/main.a8905a08.js"
   ]
 }
