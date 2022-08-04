@@ -1,4 +1,4 @@
-import { Tour } from '../TourItem/TourItem';
+import { Tour } from '../../TourApiResponseTypes';
 import TourItem from '../TourItem/TourItem';
 import s from './TourList.module.css';
 

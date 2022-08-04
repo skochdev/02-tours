@@ -1,16 +1,10 @@
 import s from './TourItem.module.css';
 import { useState } from 'react';
-
-export interface Tour {
-  id: string;
-  name: string;
-  info: string;
-  image: string;
-  price: number;
-}
+import { Tour } from '../../TourApiResponseTypes';
 
 const TourItem = ({ image, name, info, price }: Tour) => {
   const [isReadMoreOn, setIsReadMoreOn] = useState(false);
+  // splits the string by words rather than chars, so slice returns a meaningful last word
   const shortInfo = info.split(' ').slice(0, 20).join(' ').concat('...');
 
   return (

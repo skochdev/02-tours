@@ -1,4 +1,4 @@
-import { Tour } from './components/TourItem/TourItem'; // interface for tour
+import { Tour } from './TourApiResponseTypes'; // interface for Tour
 import { useState, useEffect } from 'react';
 import TourList from './components/TourList/TourList';
 import s from './App.module.css';
@@ -7,22 +7,22 @@ import Loading from './components/Loading/Loading';
 const URL = 'https://course-api.com/react-tours-project';
 
 function App() {
-  const [tours, setTours] = useState([]);
+  const [tours, setTours] = useState([] as Tour[]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    fetchTours(URL);
+    void fetchTours(URL);
   }, []);
 
   const handleNotInterestedClick = (id: string) => {
-    console.log('click');
     console.log(tours);
+
     setTours(
       tours.filter((tour: Tour) => {
         if (tour.id !== id) {
-          return tour;
+          return tour as Tour;
         }
       }),
     );
@@ -34,8 +34,8 @@ function App() {
     try {
       const response = await fetch(url);
       // guard to help catch 404
-      if (response.status > 200 || response.status < 300) {
-        const tours = await response.json();
+      if (response.ok) {
+        const tours = (await response.json()) as Tour[];
         setIsLoading(false);
         setTours(tours);
       } else {
